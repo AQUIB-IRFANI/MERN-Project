@@ -7,13 +7,13 @@ const ShowBlog = () => {
   const navigate = useNavigate();
   useEffect(() => {
     axios
-      .get(`https://blog-app-frontend-rxob.onrender.com/${id}`)
+      .get(`https://blog-app-frontend-rxob.onrender.com/blog/blog/${id}`)
       .then((res) => setBlog(res.data))
       .catch((err) => console.log(err))
   }, []);
   const handleClick = () => {
     axios
-      .delete(`https://blog-app-frontend-rxob.onrender.com/${id}`)
+      .delete(`https://blog-app-frontend-rxob.onrender.com/blog/del/${id}`)
       .then(() => navigate("/"))
       .catch((err) => console.log(err))
   };
