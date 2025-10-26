@@ -13,7 +13,7 @@ const UpdateBlog = () => {
   };
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/blog/blog/${id}`)
+      .get(`https://blog-app-frontend-rxob.onrender.com/blog/blog/${id}`)
       .then((res) => setBlog(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -21,7 +21,7 @@ const UpdateBlog = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put(`http://localhost:4000/blog/${id}`, blog)
+      .put(`https://blog-app-frontend-rxob.onrender.com/blog/${id}`, blog)
       .then(() => navigate("/"))
       .catch((err) => console.log(err));
   };
