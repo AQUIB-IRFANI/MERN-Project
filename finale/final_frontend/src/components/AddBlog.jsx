@@ -13,7 +13,7 @@ const AddBlog = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://blog-app-project-63j1.onrender.com/add",blog)
+      .post("https://blog-app-project-63j1.onrender.com/blog/add",blog)
       .then(() => navigate("/"))
       .catch((err) => {
         console.log(err)
