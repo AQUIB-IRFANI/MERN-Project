@@ -6,7 +6,7 @@ const Home = () => {
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
     axios
-      .get('http://localhost:4000/blog')
+      .get('https://blog-app-project-63j1.onrender.com/blog')
       .then((res) => setBlogs(res.data))
       .catch((err) => console.log(err))
   }, []);
