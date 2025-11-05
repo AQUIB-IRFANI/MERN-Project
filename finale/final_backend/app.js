@@ -5,7 +5,9 @@ const cors = require("cors");
 const app = express()
 connectMongo()
 
-app.use(cors())
+app.use(cors({
+  origin: "https://blog-app-frontend-rxob.onrender.com"
+}));
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use('/blog', routes)
