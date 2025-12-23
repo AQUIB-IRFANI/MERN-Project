@@ -6,8 +6,21 @@ const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4">
         <div className="container">
-          <NavLink className="navbar-brand" to="/">
-            Navbar
+          <NavLink
+            className="navbar-brand d-flex align-items-center gap-2"
+            to="/"
+          >
+            <img
+              src="https://img.freepik.com/premium-vector/blog-icon-vector-image-can-be-used-public-relations-agency_120816-188181.jpg?semt=ais_hybrid&w=740&q=80"
+              alt="Blog Logo"
+              style={{
+                width: "36px",
+                height: "36px",
+                objectFit: "cover",
+                borderRadius: "6px",
+              }}
+            />
+            <span>BlogApp</span>
           </NavLink>
           <button
             className="navbar-toggler"
