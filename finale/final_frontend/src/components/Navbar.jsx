@@ -1,15 +1,16 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <>
-      <nav
-        className="navbar navbar-expand-sm navbar-dark bg-dark mb-5">
+      <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4">
         <div className="container">
-          <NavLink className="navbar-brand" to="#">Navbar</NavLink>
+          <NavLink className="navbar-brand" to="/">
+            Navbar
+          </NavLink>
           <button
-            className="navbar-toggler d-lg-none"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#collapsibleNavId"
@@ -20,14 +21,26 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="collapsibleNavId">
-            <ul className="navbar-nav me-auto mt-2 mt-lg-0">
+            <ul className="navbar-nav me-auto mb-2 mb-md-0">
               <li className="nav-item">
-                <NavLink className="nav-link" to="/" aria-current="page"
-                  >Home
-                  <span className="visually-hidden">(current)</span></NavLink>
+                <NavLink
+                  className={({ isActive }) =>
+                    `nav-link ${isActive ? "active" : ""}`
+                  }
+                  to="/"
+                >
+                  Home
+                </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/add">Add Blog</NavLink>
+                <NavLink
+                  className={({ isActive }) =>
+                    `nav-link ${isActive ? "active" : ""}`
+                  }
+                  to="/add"
+                >
+                  Add Blog
+                </NavLink>
               </li>
             </ul>
             <form className="d-flex my-2 my-lg-0">
@@ -41,9 +54,8 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
